@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+<link href="css/options.css" rel="stylesheet">
+<link href="css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+<link href="css/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+<link href="css/light.css" rel="stylesheet" type="text/css" />
+<link href="css/dark.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="d-flex flex-column flex-root" style='width:800px;'>
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Entry-->
+                    <div class="d-flex flex-column-fluid">
+                      <!--begin::Container-->
+                      <div class="container">
+                        <!--begin::Notice-->
+                        <div class="alert alert-custom alert-white alert-shadow gutter-b" role="alert">
+                          <div class="alert-text">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <select class="form-control" id="clientName"></select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--end::Notice-->
+                        <!--begin::Card-->
+                        <div class="card card-custom">
+                            <!--begin::Form-->
+                            <form class="form" method="POST" id="form-builder" action="">
+                                <!--begin::Body-->
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label for="active_time_chart" class="col-sm-4 control-label text-lg-right">Active time chart</label>
+                                                <div id="active_time_chart" class="card-rounded-bottom" data-color="success" style="height: 150px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label for="chat_time_chart" class="col-sm-4 control-label text-lg-right">Chat time chart</label>
+                                                <div id="chat_time_chart" class="card-rounded-bottom" data-color="success" style="height: 150px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--begin::Footer-->
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center;">
+                                    <button id="init_data" class="btn btn-warning">Init All Data</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Footer-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/common.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/plugins.bundle.js"></script>
+<script src="js/prismjs.bundle.js"></script>
+<script src="js/scripts.bundle.js"></script>
+<script src="js/popup.js"></script>
+<!-- <script src="js/widgets.js"></Script> -->
+</body>

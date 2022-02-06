@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Click2Call Configuration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Global Theme Styles-->
+    <!-- Custom styles for this template -->
+    <link href="css/options.css" rel="stylesheet">
+  </head>
+  <body >
+    <div class="d-flex flex-column flex-root">
+      <!--begin::Page-->
+      <div class="d-flex flex-row flex-column-fluid page">
+          <!--begin::Wrapper-->
+          <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+              <!--begin::Content-->
+              <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                  <!--begin::Entry-->
+                  <div class="d-flex flex-column-fluid">
+                    <!--begin::Container-->
+                    <div class="container">
+                      <!--begin::Notice-->
+                      <div class="alert alert-custom alert-white alert-shadow gutter-b" role="alert">
+                        <div class="alert-text">
+                          <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-6">
+                              <a href="http://www.bluebe.net" target="_blank" title="BlueBeNET">
+                                <img src="image/urlnetworks_logo.png" width="220" height="140" border="0" alt="BLB Logo"/>
+                              </a>
+                            </div>
+                            <div class="col-md-4" style="text-align: center;">
+                              <h2 style="font-family: fantasy;font-size:60px;">Click2Call Configuration</h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end::Notice-->
+                      <!--begin::Card-->
+                      <div class="card card-custom">
+                        <!--begin::Header-->
+                        <div class="card-header card-header-tabs-line">
+                          <div id="messages"></div>
+                          <ul class="nav nav-dark nav-bold nav-tabs nav-tabs-line" data-remember-tab="tab_id" role="tablist">
+                            <li class="nav-item active">
+                              <a class="nav-link active" data-toggle="tab" href="#tab_clicktocall">click2call</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#tab_popup_setting">POPUP settings</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Form-->
+                        <form class="form" method="POST" id="form-builder" action="https://preview.keenthemes.com/metronic/index.php">
+                          <!--begin::Body-->
+                          <div class="card-body">
+                            <div class="tab-content pt-3">
+                              <!--begin::Tab Pane-->
+                              <div class="tab-pane" id="tab_popup_setting">
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="popup_enable" class="col-sm-4 control-label text-lg-right">Call Popup</label>
+                                      <div class="col-sm-8">
+                                        <span class="switch">
+                                          <label>
+                                            <input type="checkbox" checked="unchecked" name="select" id="popup_enable"/>
+                                            <span></span>
+                                          </label>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">Display notifications when new calls arrive</div>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="popup_duration" class="col-sm-4 control-label text-lg-right">Popup duration</label>
+                                      <div class="col-sm-8">
+                                        <input type="number" value="" class="form-control" id="popup_duration" placeholder="popup_duration">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">Notification duration in seconds. Set to zero for no timeout.</div>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="popup_link" class="col-sm-4 control-label text-lg-right">Popup link</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" value="" class="form-control" id="popup_link" placeholder="popup_link">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">If set I will open a new tab with this link. You can use variables like #{CLIDNNUM}, #{CLIDNAME}, #{UNIQUEID}, etc Example: http://www.google.com/search?q=#{CLIDNAME}.tab by using a javascript: prefix with the name of the function and passing parameters in URI style. Example: javascript:myfunction?var=#{CLIDNUM}&var2=@{UNIQUEID}</div>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="popup_content" class="col-sm-4 control-label text-lg-right">Popup Content</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" value="" class="form-control" id="popup_content" placeholder="Popup content">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">If set, it will retrieve the contents from this URL and display it as the call notification content, so you can check your CRM and show call information right in the notification without variables like @{CLIDNUM}, #{CLIDNAME}, {#UNIQUEID}, etc. Example: http://www.google.com/search?q=#{CLIDNAME}</div>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="click_to_open_popup" class="col-sm-4 control-label text-lg-right">Click to open Popup</label>
+                                      <div class="col-sm-8">
+                                        <span class="switch">
+                                          <label>
+                                            <input type="checkbox" checked="checked" name="select" id="click_to_open_popup"/>
+                                            <span></span>
+                                          </label>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">Only open the popup link when the desktop notification is clicked (instead of automatically).</div>
+                                  </div>
+                                </div>
+                                Socket Connection Setting
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="blb_server" class="col-sm-4 control-label text-lg-right">Server</label>
+                                      <div class="col-sm-8">
+                                        <input type="number" value="" class="form-control" id="blb_server" placeholder="192.168.0.10">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="blb_port" class="col-sm-4 control-label text-lg-right">Server Port</label>
+                                      <div class="col-sm-8">
+                                        <input type="number" value="" class="form-control" id="blb_port" placeholder="Server port">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="extension" class="col-sm-4 control-label text-lg-right">Extension</label>
+                                      <div class="col-sm-8">
+                                        <input type="number" value="" class="form-control" id="extension" placeholder="Your extension">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="password" class="col-sm-4 control-label text-lg-right">password</label>
+                                      <div class="col-sm-8">
+                                        <input type="password" value="" class="form-control" id="extension_password" placeholder="password">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="col-xs-6">
+                                    <div class="form-group">
+                                      <label for="panel_context" class="col-sm-4 control-label text-lg-right">Context</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" value="" class="form-control" id="panel_context" placeholder="Organization Context">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="well well-sm well-number2url">If you use a multi tenant Setup, specify the panel context/tenant in this box. Othewise leave it empty</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--begin::Tab Pane-->
+                              <div class="tab-pane active" id="tab_clicktocall">
+                                <form id="options-form" class="form-horizontal" role="form">
+
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="enabled" class="col-sm-4 control-label text-lg-right">Enabled</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" id="enabled">
+                                            <option value="yes" selected>Yes</option>
+                                            <option value="no">No</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Enable or disable this extension.</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="from" class="col-sm-4 control-label text-lg-right">Pattern</label>
+                                        <div class="col-sm-4">
+                                          <input type="number" value="7" class="form-control" id="from" placeholder="From">
+                                        </div>
+                                        <div class="col-sm-4">
+                                          <input type="number" value="12" class="form-control" id="to" placeholder="To">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">length of phone number</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="parse" class="col-sm-4 control-label text-lg-right">Parse</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" id="parse">
+                                            <option value="disable" selected>Auto Parse</option>
+                                            <option value="I">Ctrl+I</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Auto Parse or Manual key parse</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="dial" class="col-sm-4 control-label text-lg-right">Dial</label>
+                                        <div class="col-sm-8">
+                                          <input type="text" class="form-control" id="dial" placeholder="dial" value="Q">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Set shortkey to dial</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="protocol" class="col-sm-4 control-label text-lg-right">Protocol</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" id="protocol">
+                                            <option value="sip" selected>sip:</option>
+                                            <option value="skype">skype:</option>
+                                            <option value="tel">tel:</option>
+                                            <option value="callto">callto:</option>
+                                            <option value="phone">phone:</option>
+                                            <option value="custom">Custom URL</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Protocol to use constructing URLs.</div>
+                                    </div>
+                                  </div>
+                      
+                                  <div id="custom-url-options">
+                                    <div class="form-group row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="override_enable" class="col-sm-4 control-label text-lg-right">Override Protocol</label>
+                                          <div class="col-sm-4">
+                                            <span class="switch">
+                                              <label>
+                                                <input type="checkbox" checked="checked" name="select" id="override_enable"/>
+                                                <span></span>
+                                              </label>
+                                            </span>
+                                          </div>
+                                          <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="override_protocol" placeholder="override protocol">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4">
+                                        <div class="form-group">
+                                          <div class="well well-sm well-number2url">Set page protocols to be overwritten</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input type="hidden" id="custom-preset"/>
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="custom-url" class="col-sm-4 control-label text-lg-right">Custom URL</label>
+                                          <div class="col-sm-8">
+                                            <div class="input-group">
+                                              <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                  <li><a href="#" id="custom-preset-custom">Custom Template</a></li>
+                                                  <li><a href="#" id="custom-preset-yealink1">Yealink T32 & T38 Template</a></li>
+                                                  <li><a href="#" id="custom-preset-yealink2">Yealink T22, T26, T28 Template</a></li>
+                                                  <li><a href="#" id="custom-preset-yealink3">Yealink T41, T42, T46 Template</a></li>
+                                                  <li><a href="#" id="custom-preset-snom">SNOM Template</a></li>
+                                                </ul>
+                                              </div>
+                                              <input type="text" class="form-control" id="custom-url">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4">
+                                        <div class="well well-sm well-number2url">Custom URL configuration.</div>
+                                      </div>
+                                    </div>
+                      
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="param1" class="col-sm-4 control-label text-lg-right" id="param1-label">&nbsp;</label>
+                                          <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="param1" placeholder="Parameter 1 (replaces $1)">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="param2" class="col-sm-4 control-label text-lg-right" id="param2-label">&nbsp;</label>
+                                          <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="param2" placeholder="Parameter 2 (replaces $2)">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="param3" class="col-sm-4 control-label text-lg-right" id="param3-label">&nbsp;</label>
+                                          <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="param3" placeholder="Parameter 3 (replaces $3)">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="param4" class="col-sm-4 control-label text-lg-right" id="param4-label">&nbsp;</label>
+                                          <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="param4" placeholder="Parameter 4 (replaces $4)">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4"></div>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-xs-8">
+                                        <div class="form-group">
+                                          <label for="link-target" class="col-sm-4 control-label text-lg-right">Link Target</label>
+                                          <div class="col-sm-8">
+                                            <select class="form-control" id="link-target">
+                                              <option value="default" selected>Default</option>
+                                              <option value="new-and-close">New Window (auto close)</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-4">
+                                        <div class="well well-sm well-number2url">How to open the custom URL.</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="theme" class="col-sm-4 control-label text-lg-right">Theme</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" id="theme">
+                                            <option value="light-yellow" selected>Light Yellow</option>
+                                            <option value="light-green">Light Green</option>
+                                            <option value="dark-green">Dark Green</option>
+                                            <option value="dark-blue">Dark Blue</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Theme to use when highlighting numbers.</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="repintwith" class="col-sm-4 control-label text-lg-right">Replace '+' with</label>
+                                        <div class="col-sm-8">
+                                          <select class="form-control" id="repintwith">
+                                            <option value=""></option>
+                                            <option value="00">00</option>
+                                            <option value="001">001</option>
+                                            <option value="011">011</option>
+                                            <option value="0011">0011</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Replace prefix with international dialing code.</div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-8">
+                                      <div class="form-group">
+                                        <label for="repown" class="col-sm-4 control-label text-lg-right">Replace prefix</label>
+                                        <div class="col-sm-4">
+                                          <input type="text" class="form-control" id="repown" placeholder="Prefix (i.e. +1)">
+                                        </div>
+                                        <div class="col-sm-4">
+                                          <input type="text" class="form-control" id="repownwith" placeholder="With (i.e. 0)">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                      <div class="well well-sm well-number2url">Replace/strip own international prefix.</div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <!--end::Tab Pane-->
+                              <!--begin::Tab Pane-->
+                            </div>
+                          </div>
+                          <!--end::Body-->
+                          <!--begin::Footer-->
+                          <div class="card-footer">
+                            <div class="row">
+                              <div class="col-lg-3"></div>
+                              <div class="col-lg-9">
+                                <input type="hidden" id="tab_id" name="builder[tab][tab_id]" />
+                                <input type="hidden" id="tab_extra_id" name="builder[tab][tab_extra_id]" />
+                                <button type="button" class="btn btn-success font-weight-bold mr-2" id="save">Save</button>
+                                <!-- <button type="button" name="builder_submit" data-demo="demo1" class="btn btn-primary font-weight-bold mr-2">Preview</button>
+                                <button type="button" id="builder_export" data-demo="demo1" class="btn btn-light font-weight-bold mr-2">Export</button>
+                                <button type="button" name="builder_reset" data-demo="demo1" class="btn btn-clean font-weight-bold">Reset</button> -->
+                              </div>
+                            </div>
+                          </div>
+                          <!--end::Footer-->
+                        </form>
+                        <!--end::Form-->
+                      </div>
+                      <!--end::Card-->
+                    </div>
+                    <!--end::Container-->
+                  </div>
+                  <!--end::Entry-->
+              </div>
+              <!--end::Content-->
+              <!--begin::Footer-->
+              <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+              </div>
+              <!--end::Footer-->
+          </div>
+          <!--end::Wrapper-->
+      </div>
+      <!--end::Page-->
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- number2url core JavaScript
+    ================================================== -->
+    <script src="js/options.js"></script>
+  </body>
+</html>
+

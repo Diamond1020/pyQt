@@ -1,0 +1,150 @@
+a.number2url,
+a.number2url:hover,
+a.number2url:active,
+a.number2url:visited {
+  font-size: 1em !important;
+  font-weight: normal !important;
+  background-color: #FFFFF5 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  border-radius: 3px !important;
+}
+
+a.number2url:hover {
+  border-bottom: 1px #888 dotted !important;
+}
+
+/** Light Yellow **/
+a.number2url.light-yellow,
+a.number2url.light-yellow:hover,
+a.number2url.light-yellow:active,
+a.number2url.light-yellow:visited {
+  background-color: #FFFFF5 !important;
+  color: #000 !important;
+}
+
+/** Light Green **/
+a.number2url.light-green,
+a.number2url.light-green:hover,
+a.number2url.light-green:active,
+a.number2url.light-green:visited {
+  background-color: #F5FFF5 !important;
+  color: #000 !important;
+}
+
+/** Dark Green **/
+a.number2url.dark-green,
+a.number2url.dark-green:hover,
+a.number2url.dark-green:active,
+a.number2url.dark-green:visited {
+  background-color: #009933 !important;
+  color: #FFF !important;
+  border: solid 1px #003300 !important;
+}
+
+/** Dark Blue **/
+a.number2url.dark-blue,
+a.number2url.dark-blue:hover,
+a.number2url.dark-blue:active,
+a.number2url.dark-blue:visited {
+  background-color: #0066CC !important;
+  color: #FFF !important;
+  border: solid 1px #000099 !important;
+}
+
+/** Dialer Popup **/
+div#number2urlDialer-info {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+div#number2urlDialer-pb {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+img#number2urlDialer-loading {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+img#protocol_dialog_img {
+  opacity: 50%;
+  cursor: pointer;
+}
+  img#protocol_dialog_img:hover {
+    opacity: 100%;
+    cursor: pointer;
+  }
+  img#protocol_dialog_img:active {
+    opacity: 20%;
+    cursor: pointer;
+  }
+
+div#protocol_dialog_container {
+  width: 125px;
+  height: 30px;
+  z-index: 999999;
+  background-color: transparent;
+  position: absolute;
+}
+  div#protocol_dialog_container:hover {
+    width: 125px;
+    height: 30px;
+    z-index: 999999;
+    background-color: transparent;
+    position: absolute;
+    display: block!important;
+  }
+
+input#protocol_dialog_input {
+  display: none;
+  float: left;
+  width: 100px;
+  height: 30px;
+  font-size: 15px!important;
+  direction: ltr!important;
+}
+
+img#protocol_dialog_img {
+  margin-top: 5px;
+  float: right;
+}
+
+img.dial_image_icon {
+  position: absolute;
+  right: -23px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  opacity: 50%;
+}
+
+.dial_image_icon:hover {
+  position: absolute;
+  right: -23px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  opacity: 100%;
+}
+
+.fop2-click-to-call-icon  {
+  display:none;
+  position:absolute;
+  z-index:9999;
+  width:19px;
+  height:19px;
+  background:url(image/telephone.png) center center no-repeat;
+}
+
+.fop2-click-to-call {
+  text-decoration:none;
+}

@@ -1,0 +1,36 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  
+      "name": "Skype client manager",
+      "version": "1.0",
+      "manifest_version": 2,
+      "description": "This extension is to manage client on skype",
+      "omnibox": { "keyword" : "skype" },
+      "browser_action": {
+          "default_icon": "image/telephone.png",
+          "default_popup": "popup.html"
+      },
+      "icons": {
+          "128": "image/icon-128.png",
+          "48": "image/icon-48.png",
+          "16": "image/icon.png"
+      },
+      "options_page": "",
+      "background" : {
+        "scripts": ["js/jquery.js", "js/background.js"]
+      },
+      "content_scripts": [
+          {
+              "matches": [
+                "<all_urls>"
+              ],
+              "all_frames": true,
+              "js" : ["js/jquery.js", "js/common.js", "js/skypeManage.js"],
+              "css" : ["css/skypeManage.css"]
+          }
+      ],
+      "web_accessible_resources": ["css/skypeManage.css", "image/urlnetworks_logo_small.png", "image/urlnetworks_logo_small_pb.png", "image/loading.gif", "image/icon.png"],
+      "permissions": [
+          "<all_urls>","notifications","tabs","unlimitedStorage","contextMenus"
+      ]
+  }
