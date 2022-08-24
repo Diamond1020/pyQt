@@ -17,7 +17,7 @@ import en_core_web_sm
 import gensim
 import gensim.corpora as corpora
 
-import pyLDAvis
+import pyLDAvis 
 import pyLDAvis.gensim_models
 
 class MyDialog(QDialog, Ui_Dialog):
