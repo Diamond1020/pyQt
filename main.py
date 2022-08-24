@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from ui_main import Ui_Dialog
 import numpy as np
 from nltk.corpus import stopwords
-import pandas as pd 
+import pandas as pd
 from datetime import datetime
 from matplotlib import pyplot as plt
 import collections
