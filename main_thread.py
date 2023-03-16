@@ -96,7 +96,7 @@ class WorkerThread(QThread):
                 self.slot_wordMap()
             if self.chb_topicModels.isChecked() == True:
                 self.slot_topicModels()
-
+ 
             whole = wrapper % (self.wrapper_profileNames, self.wrapper_timeframe, self.wrapper_timestampGraph, self.wrapper_top20Words, self.wrapper_wordMap, self.wrapper_topicModels)
             f.write(whole)
             f.close()
